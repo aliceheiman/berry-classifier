@@ -18,7 +18,9 @@ bytes_data = None
 
 uploaded_image = st.file_uploader("Choose your berry:")
 if uploaded_image:
-    bytes_data = uploaded_image.getvalue()   
+    bytes_data = uploaded_image.getvalue()
+
+    st.image(bytes_data, caption="Uploaded image")   
 
 if bytes_data:
     classify = st.button("CLASSIFY!")
